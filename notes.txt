@@ -1,0 +1,4 @@
+Faire l'affichage à blanc
+Traiter l'id dans le formulaire
+faire le filtre dans l'affichage
+style form / page form
