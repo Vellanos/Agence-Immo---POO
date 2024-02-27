@@ -4,29 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style/form-style.css" />
+    <link rel="stylesheet" href="src/style/nav-style.css" />
     <title>Agence CDA</title>
   </head>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html">
+        <img id="logo" src="/src/img/logo.png" alt="logo agence" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="view-page.html">Voir les annonces</a></li>
+      </ul>
+    </div>
+  </nav>
   <body>
     <form id="bienImmobilierForm">
-      <label for="type">Type de Bien Immobilier:</label>
       <select id="type">
         <option value="Appartement" selected>Appartement</option>
         <option value="Maison">Maison</option>
       </select>
-      <!-- <input type="text" id="id" placeholder="ID" required /> -->
-      <input type="text" id="titre" class="form-field" placeholder="Titre" required />
       <input
         type="text"
-        id="description"
+        id="titre"
         class="form-field"
-        placeholder="Description"
+        placeholder="Titre"
         required
       />
-      <input type="number" id="prix" class="form-field" placeholder="Prix" required />
-      <input type="text" id="adresse" class="form-field" placeholder="Adresse" required />
+      <textarea
+        name="description"
+        placeholder="Description"
+        id="description"
+        class="form-field"
+        tabindex="3"
+        required
+      ></textarea>
+      <input
+        type="number"
+        min="1"
+        id="prix"
+        class="form-field"
+        placeholder="Prix"
+        required
+      />
+      <input
+        type="text"
+        id="adresse"
+        class="form-field"
+        placeholder="Adresse"
+        required
+      />
       <div id="appartementFields">
-        <input type="number" id="etage" class="form-field" placeholder="Étage" />
-        <input type="number" id="porte" class="form-field" placeholder="Porte" />
+        <div id="appartementRowFields">
+          <input
+            type="number"
+            min="0"
+            id="etage"
+            class="form-field"
+            placeholder="n° étage"
+          />
+          <input
+            type="number"
+            min="0"
+            id="porte"
+            class="form-field"
+            placeholder="n° porte"
+          />
+        </div>
         <div class="check-fields">
           <label for="ascenseur">Ascenseur</label>
           <input id="ascenseur" type="checkbox" id="ascenseur" />
@@ -46,7 +90,7 @@
           <input id="garage" type="checkbox" id="garage" />
         </div>
       </div>
-      <button type="submit">Créer</button>
+      <button type="submit">Ajouter</button>
     </form>
 
     <script src="src/script/class.js"></script>
