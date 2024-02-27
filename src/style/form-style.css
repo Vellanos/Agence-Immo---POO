@@ -1,0 +1,43 @@
+body {
+    background-image: url("../img/form-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100dvh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 80%;
+}
+
+.form-field {
+    text-align: center;
+}
+
+#appartementFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#maisonFields {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+ .check-fields {
+    display: flex;
+    width: 80px;
+    justify-content: end;
+} 
