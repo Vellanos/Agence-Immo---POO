@@ -4,84 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style/form-style.css" />
+    <link rel="stylesheet" href="src/style/nav.css" />
     <title>Agence CDA</title>
   </head>
   <body>
-    <form id="bienImmobilierForm">
-      <select id="type">
-        <option value="Appartement" selected>Appartement</option>
-        <option value="Maison">Maison</option>
-      </select>
-      <input
-        type="text"
-        id="titre"
-        class="form-field"
-        placeholder="Titre"
-        required
-      />
-      <textarea
-        name="description"
-        placeholder="Description"
-        id="description"
-        class="form-field"
-        tabindex="3"
-        required
-      ></textarea>
-      <input
-        type="number"
-        min="1"
-        id="prix"
-        class="form-field"
-        placeholder="Prix"
-        required
-      />
-      <input
-        type="text"
-        id="adresse"
-        class="form-field"
-        placeholder="Adresse"
-        required
-      />
-      <div id="appartementFields">
-        <div id="appartementRowFields">
-          <input
-            type="number"
-            min="0"
-            id="etage"
-            class="form-field"
-            placeholder="n° étage"
-          />
-          <input
-            type="number"
-            min="0"
-            id="porte"
-            class="form-field"
-            placeholder="n° porte"
-          />
-        </div>
-        <div class="check-fields">
-          <label for="ascenseur">Ascenseur</label>
-          <input id="ascenseur" type="checkbox" id="ascenseur" />
-        </div>
+    <header class="site-header">
+      <div class="container">
+        <img src="src/img/logo.png" class="logo" alt="Logo" />
+        <nav class="site-nav">
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/add-page.html">Créer une annonce</a></li>
+            <li><a href="/view-page.html">Voir les annonces</a></li>
+          </ul>
+        </nav>
       </div>
-      <div id="maisonFields">
-        <div class="check-fields">
-          <label for="jardin">Jardin</label>
-          <input id="jardin" type="checkbox" id="jardin" />
+    </header>
+    <main>
+      <form id="bienImmobilierForm">
+        <select id="type">
+          <option value="Appartement" selected>Appartement</option>
+          <option value="Maison">Maison</option>
+        </select>
+        <input
+          type="text"
+          id="titre"
+          class="form-field"
+          placeholder="Titre"
+          required
+        />
+        <textarea
+          name="description"
+          placeholder="Description"
+          id="description"
+          class="form-field"
+          tabindex="3"
+          required
+        ></textarea>
+        <input
+          type="number"
+          min="1"
+          id="prix"
+          class="form-field"
+          placeholder="Prix"
+          required
+        />
+        <input
+          type="text"
+          id="adresse"
+          class="form-field"
+          placeholder="Adresse"
+          required
+        />
+        <div id="appartementFields">
+          <div id="appartementRowFields">
+            <input
+              type="number"
+              min="0"
+              id="etage"
+              class="form-field"
+              placeholder="n° étage"
+            />
+            <input
+              type="number"
+              min="0"
+              id="porte"
+              class="form-field"
+              placeholder="n° porte"
+            />
+          </div>
+          <div class="check-fields">
+            <label for="ascenseur">Ascenseur</label>
+            <input id="ascenseur" type="checkbox" id="ascenseur" />
+          </div>
         </div>
-        <div class="check-fields">
-          <label for="piscine">Piscine</label>
-          <input id="piscine" type="checkbox" id="piscine" />
+        <div id="maisonFields">
+          <div class="check-fields">
+            <label for="jardin">Jardin</label>
+            <input id="jardin" type="checkbox" id="jardin" />
+          </div>
+          <div class="check-fields">
+            <label for="piscine">Piscine</label>
+            <input id="piscine" type="checkbox" id="piscine" />
+          </div>
+          <div class="check-fields">
+            <label for="garage">Garage</label>
+            <input id="garage" type="checkbox" id="garage" />
+          </div>
         </div>
-        <div class="check-fields">
-          <label for="garage">Garage</label>
-          <input id="garage" type="checkbox" id="garage" />
-        </div>
-      </div>
-      <button type="submit">Ajouter</button>
-    </form>
+        <button type="submit">Ajouter</button>
+      </form>
+    </main>
 
     <script src="src/script/class.js"></script>
+    <script src="src/script/nav.js"></script>
     <script src="src/script/form.js"></script>
   </body>
 </html>

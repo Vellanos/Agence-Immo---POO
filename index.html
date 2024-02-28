@@ -3,21 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style/home-style.css" />
-    <title>Agence CDA</title>
+    <title>CDA Agence</title>
+    <link rel="stylesheet" href="src/style/nav.css" />
   </head>
   <body>
-    <div class="home-button-wrapper">
-      <div>
-        <h1>Agence Imobilière CDA</h1>
-        <h2>Spécialisée sur Grenoble et son agglomération</h2>
+    <header class="site-header">
+      <div class="container">
+        <img src="src/img/logo.png" class="logo" alt="Logo">
+        <nav class="site-nav">
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/add-page.html">Créer une annonce</a></li>
+            <li><a href="/view-page.html">Voir les annonces</a></li>
+          </ul>
+        </nav>
       </div>
-      <a href="add-page.html" class="home-button button-add"
-        >Créer une annonce</a
-      >
-      <a href="view-page.html" class="home-button button-see"
-        >Voir les annonces</a
-      >
-    </div>
+    </header>
+
+    <main>
+      <section class="main-content">
+        <h2></h2>
+        <p></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2024 My Site. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="src/script/nav.js"></script>
   </body>
 </html>
