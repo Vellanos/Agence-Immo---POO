@@ -52,7 +52,8 @@ document
         adresse,
         etage,
         porte,
-        ascenseur
+        ascenseur,
+        type
       );
     } else if (type === "Maison") {
       var jardin = document.getElementById("jardin").checked;
@@ -66,7 +67,8 @@ document
         adresse,
         jardin,
         piscine,
-        garage
+        garage,
+        type
       );
     }
 
