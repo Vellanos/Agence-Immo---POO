@@ -1,0 +1,30 @@
+body {
+    background-image: url(../img/home-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.space {
+    height: 10dvh;
+    width: 90dvw;
+}
+
+main { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90dvh;
+    margin-top: 10dvh;
+    margin-bottom: 10dvh;
+    margin: 0 5dvw;
+    
+}

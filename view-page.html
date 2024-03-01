@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style/view-style.css">
+    <link rel="stylesheet" href="src/style/view-style.css" />
+    <link rel="stylesheet" href="src/style/nav.css" />
     <title>Agence CDA</title>
   </head>
   <body>
-    <div id="card-container">
-    </div>
+    <header class="site-header">
+      <div class="container">
+        <img src="src/img/logo.png" class="logo" alt="Logo" />
+        <nav class="site-nav">
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/add-page.html">Créer une annonce</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="filters">
+        <button onclick="filterCards('all')">Tous</button>
+        <button onclick="filterCards('Appartement')">Appartements</button>
+        <button onclick="filterCards('Maison')">Maisons</button>
+      </div>      
+      <div id="card-container"></div>
+    </main>
+
     <script src="./src/script/view.js"></script>
+    <script src="src/script/nav.js"></script>
   </body>
 </html>

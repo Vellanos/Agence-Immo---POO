@@ -1,10 +1,8 @@
-const cardData = JSON.parse(localStorage.getItem("liste_bien_immo"))
+const cardData = JSON.parse(localStorage.getItem("liste_bien_immo"));
 console.log(cardData);
 
-// Sélectionner le conteneur des cards
 const cardsContainer = document.getElementById('card-container');
 
-// Tableau des images pour les appartements
 const imagesAppartement = [
     "src/img/appartement_1.jpg",
     "src/img/appartement_2.jpg",
@@ -12,7 +10,6 @@ const imagesAppartement = [
     "src/img/appartement_4.jpg"
 ];
 
-// Tableau des images pour les maisons
 const imagesMaison = [
     "src/img/house_1.jpg",
     "src/img/house_2.jpg",
@@ -21,11 +18,10 @@ const imagesMaison = [
 ];
 
 cardData.forEach(card => {
-    // Créer un élément de card
     const cardElement = document.createElement('div');
-    cardElement.classList.add('card'); // Ajouter des classes ou des attributs si nécessaire
+    cardElement.classList.add('card');
+    cardElement.setAttribute('data-type', card.type);
 
-    // Sélection aléatoire de l'image en fonction du type de bien immobilier
     let randomImage;
     if (card.type === "Appartement") {
         randomImage = imagesAppartement[Math.floor(Math.random() * imagesAppartement.length)];
@@ -41,8 +37,7 @@ cardData.forEach(card => {
         <p>Adresse: ${card.adresse}</p>
         <p>Type: ${card.type}</p>
     `;
-    
-    // Conditions d'affichage basées sur le type de bien immobilier
+
     if (card.type === "Appartement") {
         cardElement.innerHTML += `
             <p>Étage: ${card.etage}</p>
@@ -56,6 +51,18 @@ cardData.forEach(card => {
             <p>Garage: ${card.garage ? "Oui" : "Non"}</p>
         `;
     }
-    // Ajouter la card au conteneur
     cardsContainer.appendChild(cardElement);
 });
+
+function filterCards(type) {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    if (type === 'all' || card.dataset.type === type) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+filterCards('all');

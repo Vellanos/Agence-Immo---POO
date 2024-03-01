@@ -24,6 +24,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+    height: 10dvh;
 }
 .site-header .container {
     display: flex;
@@ -52,6 +53,7 @@ body {
     color: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
+    height: 10dvh;
 }
 /* Burger Menu */
 .burger-menu {
